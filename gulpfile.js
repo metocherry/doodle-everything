@@ -1,11 +1,10 @@
-const { series } = require('gulp');
+const { task, series } = require('gulp');
 const spawn = require('child_process').spawn;
 
 
-function setGitHooks() {
-  return spawn('cp', ['-rf', 'scripts/hooks/', '.git/hooks/']);
-}
+const prepare = () => spawn('cp', ['-rf', 'scripts/hooks/', '.git/hooks/']);
 
-setGitHooks.description = 'Set git hooks';
+const preinstall = series(prepare);
+preinstall.description = 'Set settings for an application';
 
-exports.prepare = series(setGitHooks);
+exports.preinstall = preinstall;
