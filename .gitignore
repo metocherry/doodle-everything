@@ -1,0 +1,22 @@
+# Project
+dist
+build
+
+# Editors
+.idea
+.vscode
+
+# Modules
+node_modules
+packages/*/node_modules/
+
+# Log
+*.log
+
+# Cache
+*.cache
+.jest
+
+# OS
+.DS_Store
+Thumbs.db

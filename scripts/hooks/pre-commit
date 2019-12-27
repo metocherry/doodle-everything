@@ -1,0 +1,18 @@
+# /usr/bin/env bash
+
+red="\033[31m"
+reset="\033[m"
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+if [[ "$BRANCH" == "master" ]]; then
+printf "$red"
+cat <<EOF
+You are on [$BRANCH] branch. You can not directly commit on [$BRANCH] branch.
+Please checkout the other branch and commit
+EOF
+printf "$reset"
+exit 1
+fi
+
+exit 0
