@@ -1,0 +1,29 @@
+{
+  "name": "shopping-tags",
+  "version": "0.0.1",
+  "description": "Add shopping tags in a product image",
+  "keywords": [
+    "javascript"
+  ],
+  "author": "jinseok.choi <metocherry@gmail.com>",
+  "homepage": "https://github.com/metocherry/doodle-everything/tree/master/packages/shopping-tags#readme",
+  "license": "MIT",
+  "main": "lib/shopping-tags.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metocherry/doodle-everything.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/metocherry/doodle-everything/issues"
+  }
+}
