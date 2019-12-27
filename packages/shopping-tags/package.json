@@ -21,7 +21,7 @@
     "url": "git+https://github.com/metocherry/doodle-everything.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "dev": "browser-sync lib -w"
   },
   "bugs": {
     "url": "https://github.com/metocherry/doodle-everything/issues"
