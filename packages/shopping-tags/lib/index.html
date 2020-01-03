@@ -5,8 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Shopping Tags</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <h1>Sopping Tags</h1>
+  <div class="d-flex align-center content-center">
+    <div class="picture">
+      <img class="img" src="/images/iu.jpg" alt="아이유">
+    </div>
+  </div>
+
+  <script type="module">
+    import shoppingTags from './shopping-tags.js';
+
+    const picture = document.querySelector('.picture');
+    console.log(picture);
+    picture.addEventListener('click', (event) => {
+      // Document(0, 0)에서 마우스 포인터 위치 좌표
+      // -> console.log(`page   : ${event.pageX}, ${event.pageY}`);
+
+      // Viewport(0, 0)에서 마우스 포인터 위치 좌표
+      // pageY = event.cleintY + window.scrollY
+      // -> console.log(`client : ${event.clientX}, ${event.clientY}`);
+
+      // 해상도(0, 0)에서 마우스 포인터 위치 좌표
+      // -> console.log(`screen : ${event.screenX}, ${event.screenY}`);
+
+      // Target Element(0, 0)에서 마우스 포인터 위치 좌표
+      // -> console.log(`offset : ${event.offsetX}, ${event.offsetY}`);
+
+      const { offsetX, offsetY, target } = event;
+      const box = createRectangle({ width: toPx(50), left: toPx(offsetX), top: toPx(offsetY) });
+      target.parentNode.appendChild(box);
+    });
+
+    function toPx(size) {
+      return `${size}px`;
+    }
+
+    function createRectangle(options) {
+      const defaults = {
+        position: 'absolute',
+        width: '100px',
+        height: '100px',
+        left: '0px',
+        top: '0px',
+        backgroundColor: '#fff'
+      };
+
+      const custom = Object.keys(options)
+        .filter(key => defaults[key] !== undefined)
+        .reduce((result, key) => Object.assign(result, { [key]: options[key] }), {});
+
+      const config = Object.assign({}, defaults, custom);
+      const rect = document.createElement('div');
+      Object.assign(rect.style, config);
+
+      return rect;
+    }
+  </script>
 </body>
 </html>

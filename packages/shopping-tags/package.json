@@ -21,7 +21,7 @@
     "url": "git+https://github.com/metocherry/doodle-everything.git"
   },
   "scripts": {
-    "dev": "browser-sync lib -w"
+    "dev": "browser-sync lib/ -w --ss assets/"
   },
   "bugs": {
     "url": "https://github.com/metocherry/doodle-everything/issues"

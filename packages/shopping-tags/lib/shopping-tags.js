@@ -1,7 +1,4 @@
-'use strict';
-
-module.exports = shoppingTags;
-
 function shoppingTags() {
-    // TODO
 }
+
+export default shoppingTags;
