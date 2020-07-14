@@ -1,11 +1,7 @@
 {
   "name": "doodle-everything",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Doodle everything I want",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/metocherry/doodle-everything.git"
@@ -16,14 +12,5 @@
   "bugs": {
     "url": "https://github.com/metocherry/doodle-everything/issues"
   },
-  "homepage": "https://github.com/metocherry/doodle-everything#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "chalk": "^3.0.0",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "lerna": "^3.19.0",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
-  }
+  "homepage": "https://github.com/metocherry/doodle-everything#readme"
 }
